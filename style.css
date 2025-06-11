@@ -1,0 +1,267 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+header {
+  position: relative;
+  background-image: url('images/teabox.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* 🔲 dark overlay so text is readable */
+  z-index: 0;
+}
+
+header * {
+  position: relative;
+  z-index: 1; /* text content above overlay */
+}
+nav a {
+  color: #ffffff; /* Bright white for contrast */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffdd57; /* Yellow highlight on hover (Lipton-style) */
+}
+/* Body styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f0;  /* light green background */
+  color: #333;
+  line-height: 1.6;
+}
+
+section h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* Home section */
+#Home h1 {
+  font-size: 2rem;
+  color: #388e3c;
+}
+
+#Home p1 {
+  display: block;
+  margin: 10px auto;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#Home button {
+  padding: 10px 20px;
+  background-color: #66bb6a;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#Home button:hover {
+  background-color: #388e3c;
+}
+
+/* Benefits and Flavors sections */
+section div {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+  color: #33691e;
+  margin-bottom: 10px;
+}
+
+/* Review stars */
+.stars {
+  color: gold;
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+/* Reviews spacing */
+#Reviews div {
+  margin-bottom: 25px;
+  text-align: left;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact form */
+form {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #66bb6a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #388e3c;
+}
+
+/* Footer */
+footer {
+  background-color: #fdfdfd;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+}
+
+#Flavors {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+#Flavors h2 {
+  color: #2e7d32;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+#Flavors div {
+  background: white;
+  margin: 20px auto; /* ⬅️ Center the box */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px; /* ⬅️ Responsive width */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+#Flavors div:hover {
+  transform: translateY(-5px);
+}
+
+#Flavors h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+#Flavors p {
+  color: #333;
+}
+section {
+  padding: 4vw 8vw; /* adjusts with screen width */
+  font-size: 1.2rem; /* scales with root font size */
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  form input, form textarea {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.stars {
+  font-size: 1.2rem;
+  text-align: center;
+}
